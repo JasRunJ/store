@@ -109,7 +109,7 @@ return arr[Math.floor(Math.random() * arr.length)]
 const reply = (teks) => {conn.sendMessage(from, { text: teks }, { quoted: msg })}
 const textImg = (teks) => {return conn.sendMessage(from, { text: teks, jpegThumbnail: fs.readFileSync(setting.pathimg) }, { quoted: msg })}
 const sendMess = (hehe, teks) => {conn.sendMessage(hehe, { text, teks })}
-const fkontak = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { 'contactMessage': { 'displayName': `${jam} WIB`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;BOT-LEXXY,;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
+const fkontak = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { 'contactMessage': { 'displayName': `${jam} WIB`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;BOT-Yami,;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
 function parseMention(text = '') {
 return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')
 }
@@ -422,7 +422,7 @@ reply(teks)
 break
 
 case 'hit_global':{
-var res = await fetchJson(`https://api.countapi.xyz/hit/Lexxy/visits`)
+var res = await fetchJson(`https://api.countapi.xyz/hit/Yami/visits`)
 reply(`*HIT GLOBAL ${res.value}*`)
 }
 break
@@ -484,7 +484,7 @@ conn.sendMessage(from, { image: { url: x.high }, caption: ini_cp_stalkig}, { quo
 }
 break
 case "githubstalk":{
-if (!q) return reply(`Contoh :\n${prefix+command} Lexxy24`)
+if (!q) return reply(`Contoh :\n${prefix+command} Yami24`)
 reply(mess.wait)
 var nama = q
 var git = await fetchJson(`https://api.github.com/users/${nama}`)
@@ -548,7 +548,7 @@ if (!q) return reply('masukkan link nya')
 let p = await api.downloader.tiktok(q)
 let nih_cptiktok = ` *TIKTOK DOWNLOADER BY CRIZZY-BOT*
 
-• *Creator:* Lexxy Official
+• *Creator:* Yami Store
 • *Title:* ${p.title}
 • *Author:* ${p.author}
 
@@ -571,7 +571,7 @@ if (!q) return reply('masukkan link nya')
 let aud = await api.downloader.tiktok(q)
 let cap_tt = ` *TIKTOK AUDIO*
 
-• *Creator:* Lexxy Official
+• *Creator:* Yami Store
 • *Title:* ${aud.title}
 • *Author:* ${aud.author}
 
@@ -778,7 +778,7 @@ if (ss_link_nya.message) return reply('[!] url tidak di temukan.')
 conn.sendMessage(from, { image: ss_link_nya, caption: 'done!' }, { quoted: msg })
 break
 case 'styletext':{
-if (!q) return reply(`_Contoh_\n${prefix+command} Lexxy`)
+if (!q) return reply(`_Contoh_\n${prefix+command} Yami`)
 let style_res = await fetchJson(`https://botcahx-rest-api.herokuapp.com/api/tools/styletext?text=${q}`)
 let ini_style = style_res.result
 let teks =`*STYLE-TEXT*\n\n`
@@ -1571,7 +1571,7 @@ break
 case 'siapakah':
 if (!q) return reply(`Penggunaan ${prefix+command} text\n\nContoh : ${prefix+command} pencipta wibu`)
 var MyLord = body.slice(10)
-var bisaa = ['Mungkin Bang Lexxy:d','Mungkin Kamu Yak?','Tanya Pak Aji','Tanya Google','Liat YouTube','Download Shoope','Mungkin Termux']
+var bisaa = ['Mungkin Bang Yami:d','Mungkin Kamu Yak?','Tanya Pak Aji','Tanya Google','Liat YouTube','Download Shoope','Mungkin Termux']
 var gaa = bisaa[Math.floor(Math.random() * bisaa.length)]
 conn.sendMessage(from, { text: `Pertanyaan : ${MyLord}\nJawaban : ${gaa}` }, { quoted: msg })
 break
