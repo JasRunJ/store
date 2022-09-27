@@ -1,0 +1,19 @@
+{
+  "contactOwner": "6281220670449",
+  "ownerNumber": ["6281220670449@s.whatsapp.net"],
+  "botName": "BOT-YAMI",
+  "ownerName": "YamiStore",
+  "pathimg": "./temp/logo.jpg",
+  "footer": "Yami © 2022",
+  "apikey": "c34aebf5f6314445fae014b8bcc3cec9f8327d96d5b429f0e0570d152c4207bf",
+  "payment": {
+    "gopay": {
+      "nomer": "083168101064",
+      "atas_nama": "NO NAME"
+    },
+    "dana": {
+      "nomer": "083168101064",
+      "atas_nama": "NO NAME"
+    }
+  }
+}
